@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  body.dark {
+    background-color: black;
+    color: white;
+  }
+  
+  body.light {
+    background-color: white;
+    color: black;
+  }
+  
+  .top-bar {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10;
+  }
+  
+  .mode-toggle,
+  .history-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  .calculator {
+    width: 320px;
+    background-color: #121212;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 120px;
+  }
+  
+  body.light .calculator {
+    background-color: #f0f0f0;
+  }
+  
+  .display {
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    overflow-x: auto;
+  }
+  
+  body.light .display {
+    background-color: white;
+    color: black;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  button:hover {
+    background-color: #2e2e2e;
+  }
+  
+  body.light button {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  button.function {
+    color: #00ff75;
+  }
+  
+  button.red {
+    color: red;
+  }
+  
+  button.equal {
+    background-color: #00c853;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .history-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    padding: 20px;
+    color: white;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+  
+  body.light .history-panel {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .history-panel.visible {
+    transform: translateX(0%);
+  }
+  
+  .history-panel h3 {
+    margin-bottom: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+.history-panel button {
+  padding: 4px 14px;
+  font-size: 0.9rem;
+  border-radius: 16px;
+  background: #444;
+  color: #fff;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+body.light .history-panel button {
+  background: #bbb;
+  color: #222;
+}
+
+.history-panel button:hover {
+  background: #666;
+  color: #fff;
+}
+
+body.light .history-panel button:hover {
+  background: #999;
+  color: #fff;
+}
+
+#double-zero {
+  color: white !important;
+}
+body.light #double-zero {
+  color: black !important;
+}
+  
