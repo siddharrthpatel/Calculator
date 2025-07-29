@@ -1,0 +1,17 @@
+run in xampp
+create database calculator_db;
+use calculator_db;
+CREATE TABLE history (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  expression VARCHAR(255),
+  result VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+open cmd using F4 in the folder 
+npm init -y
+npm install mysql
+node server.js
+
+follow the link in cmd
