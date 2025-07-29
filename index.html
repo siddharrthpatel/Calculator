@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <div class="top-bar">
+    <button class="mode-toggle" onclick="toggleMode()">🌙</button>
+    <button class="history-btn" onclick="toggleHistory()">🕒</button>
+  </div>
+
+  <div class="calculator">
+    <div class="display" id="display"></div>
+    <div class="buttons">
+      <button class="function red" onclick="clearDisplay()">C</button>
+      <button class="function" onclick="appendValue('%')">%</button>
+      <button class="function" onclick="deleteLast()">⌫</button>
+      <button class="function" onclick="appendValue('/')">÷</button>
+
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button class="function" onclick="appendValue('*')">×</button>
+
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button class="function" onclick="appendValue('-')">−</button>
+
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button class="function" onclick="appendValue('+')">+</button>
+
+      <button class="function" id="double-zero" onclick="appendValue('00')">00</button>
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <div id="history-panel" class="history-panel">
+    <h3>History</h3>
+    <ul id="history-list"></ul>
+    <button onclick="loadAllHistory()">Load All</button>
+    <button onclick="clearHistory()">Clear History</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
